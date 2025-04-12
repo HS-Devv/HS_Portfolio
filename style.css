@@ -96,3 +96,57 @@ footer {
 .dog {
   font-size: 1.2rem;
 }
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  width: 120px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  color: #333;
+}
+
+.social-links a {
+  display: block;
+  margin: 0.25rem 0;
+  color: #0077cc;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.social-links a:hover {
+  color: #005fa3;
+}
+
+/* Adjust main content to shift right */
+body {
+  padding-left: 160px; /* Makes room for sidebar */
+}
+
+/* Optional: hide sidebar on smaller screens */
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    padding-left: 2rem;
+  }
+}
+
