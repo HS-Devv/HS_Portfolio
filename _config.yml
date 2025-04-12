@@ -1,4 +1,82 @@
-theme: minima
-title: "HS_Portfolio"
-author: "Harris Seabold"
-description: "Harris Seabold's UX portfolio"
+# theme: minima
+# title: "HS_Portfolio"
+# author: "Harris Seabold"
+# description: "Harris Seabold's UX portfolio"
+
+
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve -l -H localhost`. If you change this file, please restart the 
+# server process.
+
+# Basic Site Settings
+locale                   : "en-US"
+site_theme               : "default"
+title                    : "HS_Portfolio"
+title_separator          : "-"
+name                     : &name "Harris"
+description              : &description "Harris' portfolio"
+url                      : https://hs-devv.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : 
+
+# Site Author - The following control what appear as part of the author content on the side bar.
+#               If a field is blank the icon and link will not appear, otherwise it will be shown.
+#               Additional customization can be done by editing /_includes/author-profile.html
+author:
+  # Biographic information
+  avatar           : "logo.png"
+  name             : "Harris Seabold"
+  pronouns         : "he/him"  
+  bio              : "Passionate user experience designer with a masters in both human computer interaction and industrial design."
+  location         : "NY, USA"
+  employer         : "Collins Aerospace"
+  uri              : # URL
+  email            : "hsdevv@gmail.com" 
+
+  # Academic websites
+  arxiv            : # URL - Update with the correct link to your profile
+  googlescholar    : 
+  impactstory      : # URL
+  orcid            : 
+  semantic         : # URL
+  pubmed           : 
+  researchgate     : # URL
+  scopus           : # URL
+
+  # Repositories and software development
+  bitbucket        : # Username - Update with your username on the site
+  codepen          : # Username
+  dribbble         : # Username
+  github           : # Username
+  kaggle           : # Username  
+  stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
+
+  # Social media
+  bluesky          : # Replace this with you Bluesky username
+  facebook         : # Username
+  flickr           : # Username
+  foursquare       : # Username
+  goodreads        : # Username
+  google_plus      : # Username
+  keybase          : # Username
+  instagram        : # Username
+  lastfm           : # Username
+  linkedin         : "hs-dsn"
+  mastodon         : # URL
+  medium           : # URL
+  pinterest        : # Username
+  soundcloud       : # Username
+  steam            : # Username
+  telegram         : # URL
+  tumblr           : # Username
+  twitter          : # Username
+  vine             : # Username
+  weibo            : # Username
+  wikipedia        : # Username
+  xing             : # Username
+  youtube          : # Username
+  zhihu            : # Username
