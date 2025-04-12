@@ -31,28 +31,46 @@ h1 {
   color: #666;
 }
 
-/* Navigation */
-nav {
-  margin-bottom: 2rem;
-  text-align: center;
+/* Navigation bar */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-nav ul {
+.nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-nav a {
+
+.nav a {
   text-decoration: none;
-  color: #0077cc;
-  font-weight: 500;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
-nav a:hover {
+.nav a:hover {
   text-decoration: underline;
 }
+
+
+
+/* Make space for sticky nav */
+body {
+  padding-top: 80px; /* Add room for nav bar */
+}
+
 
 /* Main sections */
 main section {
@@ -100,14 +118,15 @@ footer {
 /* Sidebar */
 .sidebar {
   position: fixed;
-  top: 2rem;
+  top: 5rem;
   left: 2rem;
-  width: 120px;
-  text-align: center;
+  width: 200px;
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  z-index: 1100;
 }
 
 .profile-img {
@@ -119,6 +138,11 @@ footer {
 
 .sidebar h2 {
   font-size: 1rem;
+  color: #333;
+}
+
+.sidebar p {
+  font: size 0.5rem;
   color: #333;
 }
 
@@ -140,7 +164,7 @@ body {
 }
 
 /* Optional: hide sidebar on smaller screens */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   .sidebar {
     display: none;
   }
