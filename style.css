@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+    background: #fafafa;
+    color: #333;
+}
+
+h1, h2 {
+    color: #444;
+}
