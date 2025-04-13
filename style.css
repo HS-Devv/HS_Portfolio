@@ -11,13 +11,14 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 1200;
   margin: auto;
+  padding-left: 160px;
 }
 
 /* Header */
 header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 3rem;
 }
 
@@ -27,9 +28,31 @@ h1 {
 }
 
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: #666;
 }
+
+.toggle-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem; /* Adjust size if needed */
+  cursor: pointer;
+  line-height: 1;
+  box-shadow: none;
+  outline: none;
+  transform: scaleX(-1)
+}
+
+.toggle-button:hover,
+.toggle-button:focus {
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
 
 /* Navigation bar */
 .nav {
@@ -60,17 +83,17 @@ h1 {
   font-size: 1rem;
 }
 
+.nav p {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 10rem;
+}
+
 .nav a:hover {
   text-decoration: underline;
 }
-
-
-
-/* Make space for sticky nav */
-body {
-  padding-top: 80px; /* Add room for nav bar */
-}
-
 
 /* Main sections */
 main section {
@@ -105,62 +128,91 @@ a:hover {
 /* Footer */
 footer {
   border-top: 1px solid #eee;
-  text-align: center;
+  text-align: left;
   padding-top: 2rem;
   font-size: 0.9rem;
   color: #999;
 }
 
-.dog {
-  font-size: 1.2rem;
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem; /* spacing between content and sidebar */
+  max-width: 1500;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 /* Sidebar */
 .sidebar {
-  position: fixed;
-  top: 5rem;
-  left: 2rem;
+  position: sticky;
   width: 200px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 1rem;
-  z-index: 1100;
+}
+
+.siteBody {
+  flex: 1;
+  max-width: 1000px; /* or bump this to 900 or 1000 if you like */
+  margin-top: 4rem;
 }
 
 .profile-img {
-  width: 80px;
-  height: 80px;
+  width: 150;
+  height: 150;
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 4rem;
+  background-color: #dcdae0;
+}
+
+.wave-img {
+  width: 100px;
+  height: 75px;
+  object-fit: contain;
+}
+
+.darkmode-img {
+  width: 20px;
+  height: 20px;
+}
+
+.cat-img {
+  width: 100px;
+  height: 100px;
+  transform: scaleX(-1);
 }
 
 .sidebar h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #333;
+  margin-top: .5rem;
 }
 
 .sidebar p {
-  font: size 0.5rem;
+  font: size 0.75rem;
   color: #333;
 }
 
 .social-links a {
   display: block;
   margin: 0.25rem 0;
-  color: #0077cc;
+  color: #333;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: .85rem;
+  font-weight: 500;
 }
 
 .social-links a:hover {
   color: #005fa3;
 }
 
-/* Adjust main content to shift right */
-body {
-  padding-left: 160px; /* Makes room for sidebar */
+.social-links a span {
+  margin-right: 0.5rem;
 }
 
 /* Optional: hide sidebar on smaller screens */
@@ -174,3 +226,57 @@ body {
   }
 }
 
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode p {
+  color:#bbb;  
+}
+
+body.dark-mode a {
+  color: #bbb;
+}
+
+body.dark-mode a:hover {
+  color: #99ddff;
+}
+
+body.dark-mode .nav {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .sidebar {
+  color: #f0f0f0;
+}
+
+body.dark-mode .sidebar h2 {
+  color: #f0f0f0;
+}
+
+body.dark-mode .sidebar p {
+  color: #686868;
+}
+
+body.dark-mode .sidebar .profile-img{
+  background-color: #262627;
+}
+
+body.dark-mode .social-links a {
+  color: #686868;
+}
+
+body.dark-mode .social-links a:hover {
+  color: #99ddff;
+}
+
+body.dark-mode main h2 {
+  color: #f0f0f0;
+}
+
+body.dark-mode main p {
+  color: #bbb
+}

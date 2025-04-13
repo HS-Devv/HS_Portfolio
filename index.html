@@ -7,56 +7,108 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <aside class="sidebar">
-    <img src="profile.jpg" alt="Profile image of Harris" class="profile-img" />
-    <h2>Harris</h2>
-    <p>UX designer with over five years of experience in the aerospace, defense, and construction industires.</p>
-    <div class="social-links">
-      <a href="mailto:hsdevv@gmail.com">✉️</a>
-      <a href="https://www.linkedin.com/in/hs-dsn/">in</a>
-      <!-- Add more icons or links here -->
-    </div>
-  </aside>
 
   <nav class="nav">
     
     <ul>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="your-cv.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="assets/HarrisSeabold_April2025.pdf" target="_blank" rel="noopener">CV</a></li>
       <li><a href="#contact">Contact</a></li>
+      <button class="toggle-button" id="darkModeToggle" aria-label="Toggle dark mode"><img src="assets/darkMode.png" data-dark="assets/lightMode.png" class="darkmode-img"></button>
+
     </ul>
   </nav>
 
-  <header>
-    <h1>Hi, I’m Harris.</h1>
-    <p class="subtitle">I'm a UX designer with over five years of experience in the aerospace, defense, and construction industires.</p>
-  </header>
+  <div class="layout">
 
-  <main>
-    <section id="projects">
-      <h2>Selected Projects</h2>
-      <div class="project">
-        <h3>Project Title</h3>
-        <p>Short description of what you did, your role, tools used, etc.</p>
-        <!-- Later: add images or case study links here -->
+    <aside class="sidebar">
+
+      <img src="assets/profile.png" data-dark="assets/profileLight.png" class="profile-img" alt="Profile" />
+
+      <h2>Harris' Portfolio</h2>
+
+      <p>UX designer with over five years of experience in the aerospace, defense, and construction industires.</p>
+
+      <div class="social-links">
+        <a><span>🗽</span> NYC, NY</a>
+        <a href="mailto:hsdevv@gmail.com"><span>✉️</span> hsdevv@gmail.com</a>
+        <a href="https://www.linkedin.com/in/hs-dsn/" target="_blank" aria-label="LinkedIn">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#0077B5" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.85-3.037-1.853 0-2.136 1.447-2.136 2.942v5.664H9.354V9h3.414v1.561h.05c.476-.897 1.637-1.85 3.372-1.85 3.6 0 4.265 2.368 4.265 5.452v6.289zM5.337 7.433c-1.144 0-2.07-.926-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.144-.927 2.07-2.07 2.07zM6.754 20.452H3.921V9h2.833v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.554C0 23.23.792 24 1.771 24h20.451C23.206 24 24 23.229 24 22.277V1.723C24 .771 23.206 0 22.225 0z"/>
+          </svg></span>
+          personal linkedin
+        </a>
+        <!-- Add more icons or links here -->
       </div>
-    </section>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <p>A short blurb about your background, design philosophy, or what makes you unique.</p>
-    </section>
+    </aside>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:hsdevv@gmail.com">hsdevv@gmail.com</a></p>
-      <p>Or find me on <a href="https://www.linkedin.com/in/hs-dsn/">LinkedIn</a></p>
-    </section>
-  </main>
+    <div class="siteBody">
 
-  <footer>
-    <p>Thanks for scrolling. <span class="dog">🐶</span></p>
-  </footer>
+      <!-- <img src="assets/wave.png" data-dark="assets/waveLight.png" class="wave-img" alt="Waving hand" /> -->
+
+      <header>
+        <h1>Hi, I’m Harris Seabold. </h1>
+        <p class="subtitle">I'm a user experience designer with a masters degree in both human computer interaction and industrial design. 
+          I have over five years of professional experience in the aerospace, defense, and construction industries. 
+          I'm an analytical thinker who's passionate about a wide range of creative endeavors, 
+          from 3D art to web design, digital twin development, and sketching. I'm always looking for the next opportunity 
+          <em>- feel free to get in touch! </em>
+          <br></br>
+          <p class="subtitle">While you're here check out my projects and case studies.</p>
+      </header>
+
+      <main>
+
+        <section id="projects">
+          <h2>Selected Projects</h2>
+          <div class="project">
+            <p>link to featured project here</p>
+            <!-- Later: add images or case study links here -->
+          </div>
+        </section>
+
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:hsdevv@gmail.com">hsdevv@gmail.com</a></p>
+          <p>Or find me on <a href="https://www.linkedin.com/in/hs-dsn/">LinkedIn</a></p>
+        </section>
+
+        
+        <footer>
+          <p>Thanks for scrolling. </p>
+          <img src="assets/cat.png" data-dark="assets/catLight.png" class="cat-img"/>
+        </footer>
+
+      </main>
+
+    </div>  
+    
+  </div>
+
+
+  <script>
+    const toggleButton = document.getElementById('darkModeToggle');
+    const body = document.body;
+  
+    toggleButton.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+  
+      // Swap images
+      document.querySelectorAll('img[data-dark]').forEach(img => {
+        const lightSrc = img.src;
+        const darkSrc = img.getAttribute('data-dark');
+        if (body.classList.contains('dark-mode')) {
+          img.dataset.light = lightSrc;
+          img.src = darkSrc;
+        } else {
+          img.src = img.dataset.light;
+        }
+      });
+    });
+  </script>
+  
+
 </body>
 </html>
