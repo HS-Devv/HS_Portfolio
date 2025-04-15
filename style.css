@@ -14,6 +14,7 @@ body {
   max-width: 1200;
   margin: auto;
   padding-left: 160px;
+  overflow: hidden;
 }
 
 /* Header */
@@ -27,9 +28,30 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-.subtitle {
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #444;
+}
+
+p {
   font-size: 1rem;
   color: #666;
+}
+
+/* Contact links */
+a {
+  color: #0077cc;
+}
+
+a:hover {
+  color: #005fa3;
 }
 
 .toggle-button {
@@ -53,7 +75,6 @@ h1 {
   box-shadow: none;
 }
 
-
 /* Navigation bar */
 .nav {
   position: fixed;
@@ -75,20 +96,11 @@ h1 {
   gap: 2rem;
 }
 
-
 .nav a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
   font-size: 1rem;
-}
-
-.nav p {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-right: 10rem;
 }
 
 .nav a:hover {
@@ -100,39 +112,6 @@ main section {
   margin-bottom: 3rem;
 }
 
-h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.project h3 {
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  color: #444;
-}
-
-.project p {
-  margin-top: 0.5rem;
-}
-
-/* Contact links */
-a {
-  color: #0077cc;
-}
-
-a:hover {
-  color: #005fa3;
-}
-
-/* Footer */
-footer {
-  border-top: 1px solid #eee;
-  text-align: left;
-  padding-top: 2rem;
-  font-size: 0.9rem;
-  color: #999;
-}
 
 .layout {
   display: flex;
@@ -153,17 +132,37 @@ footer {
   flex-direction: column;
   align-items: left;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .siteBody {
   flex: 1;
   max-width: 1000px; /* or bump this to 900 or 1000 if you like */
   margin-top: 4rem;
+  padding-right: 1rem; /* Give content some breathing room */
+  box-sizing: border-box; /* Ensure padding doesn’t break layout */
+  overflow: auto;  
+  height: calc(100vh - 4rem); 
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE and Edge */
+}
+
+.siteBody::-webkit-scrollbar {
+  display: none;                 /* Chrome, Safari */
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #eee;
+  text-align: left;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  color: #999;
 }
 
 .profile-img {
-  width: 150;
-  height: 150;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 4rem;
@@ -187,21 +186,10 @@ footer {
   transform: scaleX(-1);
 }
 
-.sidebar h2 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-top: .5rem;
-}
-
-.sidebar p {
-  font: size 0.75rem;
-  color: #333;
-}
-
 .social-links a {
   display: block;
   margin: 0.25rem 0;
-  color: #333;
+  color: #666;
   text-decoration: none;
   font-size: .85rem;
   font-weight: 500;
@@ -213,17 +201,6 @@ footer {
 
 .social-links a span {
   margin-right: 0.5rem;
-}
-
-/* Optional: hide sidebar on smaller screens */
-@media (max-width: 950px) {
-  .sidebar {
-    display: none;
-  }
-
-  body {
-    padding-left: 2rem;
-  }
 }
 
 /* Dark Mode */
@@ -240,6 +217,10 @@ body.dark-mode a {
   color: #bbb;
 }
 
+body.dark-mode h2 {
+  color: #f0f0f0;
+}
+
 body.dark-mode a:hover {
   color: #99ddff;
 }
@@ -253,7 +234,7 @@ body.dark-mode .sidebar {
   color: #f0f0f0;
 }
 
-body.dark-mode .sidebar h2 {
+body.dark-mode .sidebar h3 {
   color: #f0f0f0;
 }
 
@@ -273,10 +254,18 @@ body.dark-mode .social-links a:hover {
   color: #99ddff;
 }
 
-body.dark-mode main h2 {
-  color: #f0f0f0;
+body.dark-mode  footer{
+  border-top: 1px solid #222222;
 }
 
-body.dark-mode main p {
-  color: #bbb
+
+/* hide sidebar on smaller screens */
+@media (max-width: 950px) {
+  .sidebar {
+    display: none;
+  }
+
+  body {
+    padding-left: 2rem;
+  }
 }
