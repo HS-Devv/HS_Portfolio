@@ -283,13 +283,13 @@ body.dark-mode .photo-item figcaption {
   align-items: center;
 }
 
-/* New wrapper to control vertical space */
+/* image vertical space wrapper*/
 .image-wrapper {
   height: 300px; /* Adjust based on your desired visual size */
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent; /* Optional: subtle background */
+  background-color: transparent;
   width: 100%;
   overflow: hidden;
 }
@@ -370,7 +370,7 @@ body.dark-mode .photo-item figcaption {
 }
 
 .project-card:hover {
-  background-color: var(--project-hover, #eaeaea);
+  background-color: var( #eaeaea);
 }
 
 .dark-mode .project-card {
@@ -406,7 +406,6 @@ body.dark-mode .photo-item figcaption {
 
 .project-card-link:hover .project-card {
   background-color: var(--project-hover, #eaeaea);
-  transform: scale(1.01);
   transition: transform 0.2s ease;
 }
 
