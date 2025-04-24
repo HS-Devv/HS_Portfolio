@@ -32,6 +32,9 @@ h2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
   color: #222;
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  gap: 0.5rem; /* Optional: adds spacing between text and image */
 }
 
 h3 {
@@ -219,6 +222,9 @@ body.dark-mode a {
 
 body.dark-mode h2 {
   color: #f0f0f0;
+  display: flex;
+  align-items: center; /* Vertically centers items */
+  gap: 0.5rem; /* Optional: adds spacing between text and image */
 }
 
 body.dark-mode h3 {
