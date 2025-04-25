@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HS_Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+  <!-- <link rel="icon" href="assets/favicon.png" type="image/png" /> -->
+
+</head>
+<body>
+
+  <nav class="nav">
+    
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="../assets/HarrisSeabold_April2025.pdf" target="_blank" rel="noopener">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <button class="toggle-button" id="darkModeToggle" aria-label="Toggle dark mode"><img src="../assets/darkMode.png" data-dark="../assets/lightMode.png" class="darkmode-img"></button>
+
+    </ul>
+  </nav>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+
+      <a href="../index.html">
+        <img src="../assets/profile.png" data-dark="../assets/profileLight.png" class="profile-img" alt="Profile" />
+      </a>
+      
+      <h3>Harris' Portfolio</h3>
+
+      <p>UX designer with over five years of experience in the aerospace, defense, and construction industires.</p>
+
+      <div class="social-links">
+        <a><span>🗽</span> NYC, NY</a>
+        <a href="mailto:hsdevv@gmail.com"><span>✉️</span> hsdevv@gmail.com</a>
+        <a href="https://www.linkedin.com/in/hs-dsn/" target="_blank" aria-label="LinkedIn">
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#0077B5" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.85-3.037-1.853 0-2.136 1.447-2.136 2.942v5.664H9.354V9h3.414v1.561h.05c.476-.897 1.637-1.85 3.372-1.85 3.6 0 4.265 2.368 4.265 5.452v6.289zM5.337 7.433c-1.144 0-2.07-.926-2.07-2.07 0-1.143.926-2.07 2.07-2.07 1.143 0 2.07.927 2.07 2.07 0 1.144-.927 2.07-2.07 2.07zM6.754 20.452H3.921V9h2.833v11.452zM22.225 0H1.771C.792 0 0 .771 0 1.723v20.554C0 23.23.792 24 1.771 24h20.451C23.206 24 24 23.229 24 22.277V1.723C24 .771 23.206 0 22.225 0z"/>
+          </svg></span>
+          personal linkedin
+        </a>
+        <!-- Add more icons or links here -->
+      </div>
+
+    </aside>
+
+    <div class="siteBody">
+
+      <header>
+        <h2>SDAT</h2>
+
+      </header>
+
+      <main>
+
+        <h3>Background</h3>
+        <p>background.</p> <a href="https://www.youtube.com/watch?v=IfDnwitsMvM"> Reference video.</a><br>
+
+        <div class="photo-grid">
+          <figure class="photo-item">
+            <div class="image-wrapper">
+              <img src="../assets/sdatPhotos/SDAT1.jpg" alt="Description of photo 1">
+            </div>
+            <figcaption>The SDAT login screen.</figcaption>
+          </figure>
+          
+          <figure class="photo-item">
+            <div class="image-wrapper">
+              <img src="../assets/sdatPhotos/SDAT2.jpg" alt="Description of photo 2">
+            </div>
+            <figcaption>SDAT User.</figcaption>
+          </figure>
+        </div>
+
+        <h3>Process</h3>
+          <p>process
+          </p><br>
+
+
+          <div class="photo-grid">
+            <figure class="photo-item">
+              <div class="image-wrapper">
+                <img src="../assets/sdatPhotos/SDAT3.jpg" alt="DNA HUD">
+              </div>
+              <figcaption>Encroachment zone UI.</figcaption>
+            </figure>
+            
+            <figure class="photo-item">
+              <div class="image-wrapper">
+                <img src="../assets/sdatPhotos/SDAT4.png" alt="DNA Lab">
+              </div>
+              <figcaption>SDAT point cloud app.</figcaption>
+            </figure>
+          </div>
+
+        <h3>UI Prototype</h3>
+        <br>
+        <p>prototype (use a desktop browser for the best experience)</p><br> 
+
+        <div class="photo-grid">
+          <figure class="photo-item">
+            <div class="image-wrapper">
+              <img src="../assets/sdatPhotos/SDAT5.png" alt="DNA HUD">
+            </div>
+            <figcaption>SDAT pathing.</figcaption>
+          </figure>
+          
+          <figure class="photo-item">
+            <div class="image-wrapper">
+              <img src="../assets/sdatPhotos/sdatZoning.png" alt="DNA Lab">
+            </div>
+            <figcaption>SDAT encroachment UI, alternate view.</figcaption>
+          </figure>
+        </div>
+
+
+        <h3>3D Modeling</h3>
+        <p>3D Modeling</p>
+
+        <br> <br>
+
+        <section>
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:hsdevv@gmail.com">hsdevv@gmail.com</a></p>
+          <p>...or find me on <a href="https://www.linkedin.com/in/hs-dsn/">LinkedIn</a></p>
+        </section>
+
+        <br>
+        <br>
+        <br>
+
+        
+        <footer>
+          <p>Thanks for scrolling. </p>
+          <img src="../assets/cat.png" data-dark="../assets/catLight.png" class="cat-img"/>
+        </footer>
+        <br>
+        <br>
+        <br>
+
+      </main>
+
+    </div>  
+    
+  </div>
+
+  <!-- image overlay div -->
+  <div id="image-overlay" class="overlay hidden">
+    <img id="overlay-img" src="" alt="Expanded image">
+  </div>
+
+
+<script src="../js/script.js"></script>
+  
+  
+
+</body>
+</html>
