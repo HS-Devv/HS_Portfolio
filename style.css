@@ -19,7 +19,7 @@ body {
 
 @font-face {
   font-family: 'OpenDyslexic';
-  src: url('/assets/fonts/OpenDyslexic-Regular.woff') format('woff');
+  src: url('assets/fonts/OpenDyslexic-Regular.woff') format('woff');
 }
 
 body.dyslexic {
