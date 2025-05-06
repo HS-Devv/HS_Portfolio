@@ -17,6 +17,15 @@ body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/assets/fonts/OpenDyslexic-Regular.woff') format('woff');
+}
+
+body.dyslexic {
+  font-family: 'OpenDyslexic', sans-serif;
+}
+
 /* Header */
 header {
   text-align: left;

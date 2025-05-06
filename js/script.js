@@ -48,3 +48,18 @@ overlay.addEventListener('click', () => {
   overlay.classList.add('hidden');
   overlayImg.src = '';
 });
+
+// Toggle Font between Helvetica Neue and Open Dyslexia
+const toggleFontButton = document.getElementById('fontToggle');
+     // Check saved preference on load
+if (localStorage.getItem('useDyslexicFont') === 'true') {
+  body.classList.add('dyslexic');
+}
+     // Toggle and save preference
+toggleFontButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  body.classList.toggle('dyslexic');
+  const isDyslexic = body.classList.contains('dyslexic');
+  localStorage.setItem('useDyslexicFont', isDyslexic);
+  console.log("font toggled!");
+});
